@@ -1,0 +1,14 @@
+.main-wrapper{
+    width: 370px;
+    height: 470px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.tabs-wrapper{
+    position: relative;
+}
