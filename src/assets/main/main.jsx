@@ -4,6 +4,7 @@ import Tabs from '../tabs/tabs';
 import Inputs from '../inputs/inputs';
 import Buttons from '../buttons/buttons';
 import Select from '../select/select';
+import infoCard from '../fakeInfoCard/infoCard';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,16 @@ class App extends Component {
       buttonsRowCreditScore: [600, 650, 700, 750, 800, 850, 900],
       mileages: [10000, 12000, 15000],
       isLease: true,
+      fakeInfo: {},
     };
+  }
+
+  componentDidMount() {
+    Promise.resolve(infoCard).then(value => {
+      this.setState({
+        fakeInfo: value.data,
+      });
+    });
   }
 
   changeTabs = e => {
@@ -57,6 +67,7 @@ class App extends Component {
     const { buttonsRowCreditScore } = this.state;
     const { buttonsLabel } = this.state;
     const { mileages } = this.state;
+    const { fakeInfo } = this.state;
     return (
       <>
         <div className="main-wrapper">
@@ -98,6 +109,13 @@ class App extends Component {
             ) : (
               false
             )}
+          </div>
+          <div className="info-card-wrapper">
+            <p className="info-card">{`MSRP ${fakeInfo.msrp}`}</p>
+            <p className="info-card">{`Vehicle Name ${fakeInfo.vehicleName}`}</p>
+            <p className="info-card">{`Dealer Name ${fakeInfo.dealerName}`}</p>
+            <p className="info-card">{`Phone ${fakeInfo.dealerPhone}`}</p>
+            <p className="info-card">{`Rating ${fakeInfo.dealerRating}`}</p>
           </div>
         </div>
       </>

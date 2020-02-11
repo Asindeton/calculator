@@ -33,4 +33,6 @@ creditScoreValue defines by the following rules:
     return postCode.split('').map(num => num * 11);
  }
 
+ 
+
  export {leasePayment, loanPayment, creditScoreValue, taxes};
