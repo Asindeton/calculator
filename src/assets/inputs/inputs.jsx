@@ -7,7 +7,7 @@ export default function renderInputs(props) {
   return (
     <div className="inputs">
       <span className="inputs-label">{name}</span>
-      <input type="number" />
+      <input type="text" />
     </div>
   );
 }

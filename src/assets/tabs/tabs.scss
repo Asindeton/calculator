@@ -3,6 +3,7 @@
     height: 50px;
     display: inline-block;
     position: relative;
+    user-select: none;
         &:active{
             background-color: blue;
         }
