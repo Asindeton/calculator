@@ -4,8 +4,10 @@
     display: inline-block;
     position: relative;
     user-select: none;
+    transition: background-color 3s;
         &:active{
             background-color: blue;
+            transition: background-color 0s;
         }
 }
 
