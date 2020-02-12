@@ -1,0 +1,38 @@
+.main-wrapper{
+    width: 370px;
+    height: 550px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.tabs-wrapper{
+    position: relative;
+}
+.buttons-title{
+    text-align: center;
+    position: relative;
+}
+.buttons{
+    text-align: center;    
+}
+.select-wrapper{
+    display: inline;
+    margin: 10px;
+}
+
+.info-card{
+    margin: 10px;
+    display: inline-block;
+}
+
+.info-card-wrapper{
+    position: absolute;
+    bottom: 0px;
+}
+.many{
+    display: block;
+}
